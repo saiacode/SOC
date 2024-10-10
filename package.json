@@ -1,0 +1,23 @@
+{
+  "name": "soc-project",
+  "version": "1.0.0",
+  "description": "Software de Onboarding y Clasificación",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "César Briatore for SAIA",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "google-spreadsheet": "^3.3.0",
+    "openai": "^4.67.1",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0",
+    "socket.io": "^4.8.0",
+    "whatsapp-web.js": "^1.26.0"
+  }
+}
