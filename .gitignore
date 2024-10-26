@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# google cloud credentials
+credentials.json
+
+# Whatsapp web
+.wwebjs_cache/
