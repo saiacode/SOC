@@ -36,7 +36,6 @@ function initializeWhatsAppClient(handleLLMQuery) {
                 console.error('No se ha configurado un manejador de mensajes');
             }
         });
-
         client.initialize();
     }
 }

@@ -24,7 +24,18 @@ async function initializeGoogleSheets() {
     }
 }
 
-async function searchInSheet(query) {
+function checkIfValueIncludesWord(value, keyWords){
+    let response = false
+    for(const word of keyWords){
+        if(value.toString().toLowerCase().includes(word.toLowerCase())){
+            response = response || true
+        }
+        response = response || false
+    }
+    return response
+}
+
+async function searchInSheet(keyWords) {
     if (!doc) {
         await initializeGoogleSheets();
     }
@@ -35,9 +46,12 @@ async function searchInSheet(query) {
 
         const rows = await sheet.getRows();
         const results = rows.filter(row => 
-            Object.values(row).some(value => 
-                value && value.toString().toLowerCase().includes(query.toLowerCase())
-            )
+            Object.values(row).some(value => {
+                if(value){
+                    return checkIfValueIncludesWord(value, keyWords)
+                }
+                return false
+            })
         );
 
         addLog(`Búsqueda completada. Se encontraron ${results.length} resultados.`);

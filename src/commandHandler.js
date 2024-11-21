@@ -2,7 +2,7 @@ const profileLoader = require('./profileLoader');
 const { handleLLMQuery } = require('./llmHandler');
 const { searchInSheet } = require('./googleSheets');
 
-const opciones = `
+export const opciones = `
 ¡Hola! Bienvenido al chatbot de SOC. Estas son las opciones disponibles:
 
 1. Buscar perfil: Escribe "!buscar" seguido del nombre o habilidad que buscas.
