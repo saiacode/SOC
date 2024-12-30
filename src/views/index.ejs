@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>SOC - Software de Onboarding y Clasificación</title>
+      <link href="/css/style.css" rel="stylesheet" type="text/css">
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="/js/socket.js"></script>
+  </head>
+  <body>
+      <div class="header">
+          <img src="/images/saia-logo.png" alt="Logo de SAIA" class="logo">
+          <div class="title">
+              <h1>SOC - Software de Onboarding y Clasificación</h1>
+          </div>
+      </div>
+      <div class="content">
+          <div class="column">
+            <%- include('partials/appStatus', {appStatus: appStatus, qrCode}); %>
+            <h2>Escanear el QR para conectar WhatsApp</h2>
+            <div id="qrContainer">
+              <%- qrCode %>
+            </div>
+          </div>
+          <div class="column">
+            <%- include('partials/sheetInfo', { sheetInfo }); %>
+            <%- include('partials/llmInfo', { llmStatus }); %>
+          </div>
+      </div>
+      <div class="logs">
+        <h3>Actividad Reciente</h3>
+        <div id="logs">
+          <% activityLogs.forEach(function(log){ %>
+              <span><%- log %></span>
+          <% }); %>
+        </div>
+      </div>
+  </body>
+</html>

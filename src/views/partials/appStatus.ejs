@@ -1,0 +1,27 @@
+<h2>Estado de la Aplicación</h2>
+<div class="status-section">
+    <div class="status-item">
+        <strong>Estado de WhatsApp:</strong> 
+        <span id="whatsappStatus"><%= appStatus.whatsappStatus %></span>
+    </div>
+    <div class="status-item">
+        <strong>Estado de Google Sheets:</strong> 
+        <%= appStatus.googleSheetsStatus %>
+    </div>
+    <div class="status-item">
+        <strong>Estado del Servidor Web:</strong> 
+        <%= appStatus.webServerStatus %>
+    </div>
+    <div class="status-item">
+        <strong>Última actualización:</strong> 
+        <%= appStatus.lastUpdate %>
+    </div>
+    <div class="status-item">
+        <strong>Versión de la aplicación:</strong> 
+        <%= appStatus.appVersion %>
+    </div>
+    <div class="status-item">
+        <strong>Ambiente:</strong> 
+        <%= appStatus.environment %>
+    </div>
+</div>

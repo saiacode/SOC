@@ -1,0 +1,17 @@
+<h2>Información del LLM</h2>
+<div class="llm-info">
+    <div class="llm-item"><strong>Modelo:</strong> <%= llmStatus.model %></div>
+    <div class="llm-item"><strong>Estado:</strong> <%= llmStatus.status %></div>
+    <div class="llm-item">
+      <strong>Última consulta:</strong> 
+      <span id="llmLastQuery"><%= llmStatus.lastQuery %></span>
+    </div>
+    <div class="llm-item">
+      <strong>Tiempo de respuesta promedio:</strong> 
+      <span id="llmAverageResponseTime"><%= llmStatus.averageResponseTime %></span> ms
+    </div>
+    <div class="llm-item">
+      <strong>Consultas totales:</strong> 
+      <span id="llmTotalQueries"><%= llmStatus.totalQueries %></span>
+    </div>
+</div>
