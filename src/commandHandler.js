@@ -1,6 +1,6 @@
 const profileLoader = require('./profileLoader');
 const { handleLLMQuery } = require('./llmHandler');
-const { searchInSheet } = require('./googleSheets');
+const { googleSheetsInstance } = require('./googleSheets');
 
 export const opciones = `
 ¡Hola! Bienvenido al chatbot de SOC. Estas son las opciones disponibles:
@@ -51,7 +51,7 @@ async function handleSearchCommand(message) {
     try {
         await message.reply(`Buscando "${query}" en la base de datos...`);
         
-        const results = await searchInSheet(query);
+        const results = await googleSheetsInstance.searchInSheet(query);
         
         if (results.length === 0) {
             return "No se encontraron resultados para tu búsqueda.";

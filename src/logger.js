@@ -1,12 +1,20 @@
-let activityLogs = [];
+const { Socket } = require('./socket')
 
-function addLog(message) {
-    activityLogs.unshift({ time: new Date().toLocaleTimeString(), message });
-    if (activityLogs.length > 10) activityLogs.pop();
+class Logger {
+  static activityLogs = [];
+
+  addLog(message) {
+    const log = { time: new Date().toLocaleTimeString(), message }
+    const socket = new Socket()
+    const socketIO = socket.getSocketIO()
+    socketIO.emit('newLog', log)
+    Logger.activityLogs.unshift(log);
+    if (Logger.activityLogs.length > 10) Logger.activityLogs.pop();
+  }
+  
+  getLogs() {
+    return Logger.activityLogs;
+  }
 }
 
-function getLogs() {
-    return activityLogs;
-}
-
-module.exports = { addLog, getLogs };
+module.exports = { Logger };

@@ -1,0 +1,89 @@
+ body { 
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    padding: 20px; 
+    margin: 0;
+    background-color: #f0f0f0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.logo { 
+    max-width: 200px; 
+}
+.title {
+    text-align: right;
+}
+h1 { 
+    color: #333; 
+    margin: 0;
+}
+h2 {
+    color: #444;
+    margin-top: 20px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.column {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.qr-code {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+}
+.status-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e7f3fe;
+    border-left: 5px solid #2196F3;
+    border-radius: 3px;
+}
+.status-item {
+    margin-bottom: 10px;
+}
+.sheet-info {
+    background-color: #e8f5e9;
+    border-left: 5px solid #4caf50;
+    padding: 15px;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+.sheet-item {
+    margin-bottom: 10px;
+}
+.logs {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.log-entry {
+    margin-bottom: 5px;
+}
+.llm-info {
+    background-color: #fff3e0;
+    border-left: 5px solid #ff9800;
+    padding: 15px;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+.llm-item {
+    margin-bottom: 10px;
+}
